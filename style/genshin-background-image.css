@@ -1,0 +1,65 @@
+body{
+    background-image: url('../images/genshin-zodiac/background.jpg');
+    background-size: auto;
+    box-sizing: border-box;
+}
+
+#aries{
+    background-image: url('../images/genshin-zodiac/icons/noelle.png');
+}
+
+#taurus{
+    background-image: url('../images/genshin-zodiac/icons/diluc.png');
+}
+
+#gemini{
+    background-image: url('../images/genshin-zodiac/icons/fischl.png');
+}
+
+#cancer{
+    background-image: url('../images/genshin-zodiac/icons/tartaglia.png');
+}
+
+#leo{
+    background-image: url('../images/genshin-zodiac/icons/amber.png');
+}
+
+#virgo{
+    background-image: url('../images/genshin-zodiac/icons/ningguang.png');
+}
+
+#libra{
+    background-image: url('../images/genshin-zodiac/icons/xingqiu.png');
+}
+
+#scorpio{
+    background-image: url('../images/genshin-zodiac/icons/keqing.png');
+}
+
+#sagittarius{
+    background-image: url('../images/genshin-zodiac/icons/kaeya.png');
+}
+
+#capricorn{
+    background-image: url('../images/genshin-zodiac/icons/zhongli.png');
+}
+
+#aquarius{
+    background-image: url('../images/genshin-zodiac/icons/beidou.png');
+}
+
+#pisces{
+    background-image: url('../images/genshin-zodiac/icons/qiqi.png');
+}
+
+.exit-button{
+    background-image: url('../images/genshin-zodiac/icons/close.png');
+}
+
+#help{
+    background-image: url('../images/genshin-zodiac/icons/help.png')
+}
+
+.sound-button{
+    background-image: url('../images/genshin-zodiac/icons/sound.png')
+}

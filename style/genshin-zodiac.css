@@ -41,7 +41,7 @@ button.active{
     display: block;
 }
 
-#control-buttons-list{
+.control-buttons-list{
     display: flex;
     gap: 0.5rem;
 }
@@ -59,6 +59,10 @@ button.active{
     text-align: center;
     width: 80%;
     max-width: 20rem;
+}
+
+#help-description{
+    border-top: 2px solid #FFF;
 }
 
 .inner-div .content-div div{

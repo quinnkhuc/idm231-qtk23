@@ -56,9 +56,13 @@ pisces.addEventListener('click', function(){
     whichCharacter('pisces');
 })
 
-help.addEventListener('click', renderHelp)
+help.addEventListener('click', function(){
+    renderHelp();
+    removeActiveClass()
+    help.classList.add('active');
+})
 
-submit.addEventListener('click', userInfo);
+submit.addEventListener('click', checkValidDate);
 
 //Function declarations
 function emptyDiv(){
@@ -67,11 +71,20 @@ function emptyDiv(){
     }
 }
 
-function userInfo(){
+function checkValidDate(){
     let birthday = new Date(document.getElementById('date').value)
-    let day = birthday.getUTCDate();
-    let month = birthday.getUTCMonth() + 1;
 
+    if(birthday.toString() == 'Invalid Date'){
+        alert('You must enter a valid birthday!');
+    }
+    else{
+        let day = birthday.getUTCDate();
+        let month = birthday.getUTCMonth() + 1;
+        userInfo(day, month);
+    }
+}
+
+function userInfo(day, month){
     let sign = '';
 
     if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
@@ -110,10 +123,13 @@ function whichCharacter(sign){
     let characterDescription = '';
     
     emptyDiv();
+    removeActiveClass();
 
     //Add new content to changeable-div
     switch(sign){
         case 'aries':
+            aries.classList.add('active');
+
             characterName = 'Noelle';
             dateRange = 'March 21th - April 19th';
             imgSrc = 'images/genshin-zodiac/character-posters/noelle.jpg';
@@ -123,6 +139,8 @@ function whichCharacter(sign){
             break;
 
         case 'taurus':
+            taurus.classList.add('active');
+
             characterName = 'Diluc';
             dateRange = 'April 20th - May 20th';
             imgSrc = 'images/genshin-zodiac/character-posters/diluc.jpg';
@@ -132,6 +150,8 @@ function whichCharacter(sign){
             break;
 
         case 'gemini':
+            gemini.classList.add('active');
+
             characterName = 'Fischl';
             dateRange = 'May 21th - June 21th';
             imgSrc = 'images/genshin-zodiac/character-posters/fischl.jpg';
@@ -141,6 +161,8 @@ function whichCharacter(sign){
             break;
             
         case 'cancer':
+            cancer.classList.add('active');
+
             characterName = 'Tartaglia';
             dateRange = 'June 22th - July 22th';
             imgSrc = 'images/genshin-zodiac/character-posters/tartaglia.jpg';
@@ -150,6 +172,8 @@ function whichCharacter(sign){
             break;
         
         case 'leo':
+            leo.classList.add('active');
+
             characterName = 'Amber';
             dateRange = 'July 23th - August 22th';
             imgSrc = 'images/genshin-zodiac/character-posters/amber.jpg';
@@ -159,6 +183,8 @@ function whichCharacter(sign){
             break;
         
         case 'virgo':
+            virgo.classList.add('active');
+
             characterName = 'Ningguang';
             dateRange = 'August 23th - September 22th';
             imgSrc = 'images/genshin-zodiac/character-posters/ningguang.jpg';
@@ -168,6 +194,8 @@ function whichCharacter(sign){
             break;
 
         case 'libra':
+            libra.classList.add('active');
+
             characterName = 'Xingqiu';
             dateRange = 'September 23th - October 23th';
             imgSrc = 'images/genshin-zodiac/character-posters/xingqiu.jpg';
@@ -177,6 +205,8 @@ function whichCharacter(sign){
             break;
 
         case 'scorpio':
+            scorpio.classList.add('active');
+
             characterName = 'Keqing';
             dateRange = 'October 24th - November 21th';
             imgSrc = 'images/genshin-zodiac/character-posters/keqing.jpg';
@@ -186,6 +216,8 @@ function whichCharacter(sign){
             break;
 
         case 'sagittarius':
+            sagittarius.classList.add('active');
+
             characterName = 'Kaeya';
             dateRange = 'November 22th - December 21th';
             imgSrc = 'images/genshin-zodiac/character-posters/kaeya.jpg';
@@ -195,6 +227,8 @@ function whichCharacter(sign){
             break;
 
         case 'capricorn':
+            capricorn.classList.add('active');
+
             characterName = 'Zhongli';
             dateRange = 'December 22th - January 19th';
             imgSrc = 'images/genshin-zodiac/character-posters/zhongli.jpg';
@@ -204,6 +238,8 @@ function whichCharacter(sign){
             break;
 
         case 'aquarius':
+            aquarius.classList.add('active');
+
             characterName = 'Beidou';
             dateRange = 'January 20th - February 18th';
             imgSrc = 'images/genshin-zodiac/character-posters/beidou.jpg';
@@ -213,6 +249,8 @@ function whichCharacter(sign){
             break;
 
         case 'pisces':
+            pisces.classList.add('active');
+
             characterName = 'Qiqi';
             dateRange = 'February 19th - March 20th';
             imgSrc = 'images/genshin-zodiac/character-posters/qiqi.jpg';
@@ -322,6 +360,7 @@ function renderHelp(){
 
 function backToMain() {
     emptyDiv();
+    removeActiveClass();
 
     const h1 = document.createElement('h1');
     h1.innerHTML = 'GENSHIN ZODIAC';
@@ -341,11 +380,28 @@ function backToMain() {
     submit.setAttribute('type', 'submit');
     submit.setAttribute('id', 'submit');
     submit.setAttribute('value', 'SUBMIT');
-    submit.addEventListener('click', userInfo);
+    submit.addEventListener('click', checkValidDate);
 
     changeableContentDiv.appendChild(h1);
     changeableContentDiv.appendChild(h2);
     changeableContentDiv.appendChild(inputDiv);
     inputDiv.appendChild(date);
     inputDiv.appendChild(submit);
+}
+
+function removeActiveClass(){
+    help.classList.remove('active');
+
+    aries.classList.remove('active');
+    taurus.classList.remove('active');
+    gemini.classList.remove('active');
+    cancer.classList.remove('active');
+    leo.classList.remove('active');
+    virgo.classList.remove('active');
+    libra.classList.remove('active');
+    scorpio.classList.remove('active');
+    sagittarius.classList.remove('active');
+    capricorn.classList.remove('active');
+    aquarius.classList.remove('active');
+    pisces.classList.remove('active');
 }

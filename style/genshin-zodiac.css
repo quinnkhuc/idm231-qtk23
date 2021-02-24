@@ -113,6 +113,11 @@ button.active{
     padding: 1rem;
 }
 
+#submit:hover{
+    background-color: #FFF;
+    color: #000;
+}
+
 #wrapper{
     height: 100%;
     margin: 2rem auto 0;
@@ -170,7 +175,7 @@ button.active{
 
     .inner-div{
         display: grid;
-        grid-template-columns: 39% 2% 59%;
+        grid-template-columns: 39.75% 0.5% 59.75%;
         grid-template-areas: 'img . content';
     }
 

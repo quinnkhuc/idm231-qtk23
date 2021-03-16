@@ -341,6 +341,7 @@ function addCharacterContent(imgSrc, dateRange, characterName, characterDescript
 
 function renderHelp(){
     emptyDiv();
+    audio.pause();
 
     const innerDiv = document.createElement('div');
     innerDiv.classList.add('inner-div')

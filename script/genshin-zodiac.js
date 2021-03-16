@@ -18,6 +18,8 @@ const changeableContentDiv = document.getElementById('changeable-content-div');
 
 const submit = document.getElementById('submit');
 
+const audio = document.getElementById('audio');
+
 //Add event listeners
 aries.addEventListener('click', function(){
     whichCharacter('aries');
@@ -121,6 +123,7 @@ function whichCharacter(sign){
     let dateRange = '';
     let imgSrc = '';
     let characterDescription = '';
+    let audioSrc = '';
     
     emptyDiv();
     removeActiveClass();
@@ -133,9 +136,10 @@ function whichCharacter(sign){
             characterName = 'Noelle';
             dateRange = 'March 21th - April 19th';
             imgSrc = 'images/genshin-zodiac/character-posters/noelle.jpg';
-            characterDescription = 'Aries are willful, courageous, independent, and idealist. This represents Noelle greatly. Noelle has much greater dreams and ambitions than other maids in the Knights of Favonius. Just like everyone in the city of Mondstadt, she dreams of becoming a knight and donning the honored armor. Even if her skills are not enough to pass the rigorous selection trials, she still not gives up and keeps trying her hardest.'
+            characterDescription = 'Aries are willful, courageous, independent, and idealist. This represents Noelle greatly. Noelle has much greater dreams and ambitions than other maids in the Knights of Favonius. Just like everyone in the city of Mondstadt, she dreams of becoming a knight and donning the honored armor. Even if her skills are not enough to pass the rigorous selection trials, she still not gives up and keeps trying her hardest.';
+            audioSrc = 'audio/noelle.mp3';
             
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
 
         case 'taurus':
@@ -144,9 +148,10 @@ function whichCharacter(sign){
             characterName = 'Diluc';
             dateRange = 'April 20th - May 20th';
             imgSrc = 'images/genshin-zodiac/character-posters/diluc.jpg';
-            characterDescription = 'Taurus are reliable, practical, and responsible, and none other character in Genshin Impact represents a Taurus better than Diluc. As the wealthiest gentleman in Mondstadt, Diluc always presents himself as the epitome of perfection. But behind the courteous visage burns a zealous soul that has sworn to protect Mondstadt at all costs, allowing him to mercilessly vanquish all those who threaten his city.'
+            characterDescription = 'Taurus are reliable, practical, and responsible, and none other character in Genshin Impact represents a Taurus better than Diluc. As the wealthiest gentleman in Mondstadt, Diluc always presents himself as the epitome of perfection. But behind the courteous visage burns a zealous soul that has sworn to protect Mondstadt at all costs, allowing him to mercilessly vanquish all those who threaten his city.';
+            audioSrc = 'audio/diluc.mp3';
             
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
 
         case 'gemini':
@@ -155,9 +160,10 @@ function whichCharacter(sign){
             characterName = 'Fischl';
             dateRange = 'May 21th - June 21th';
             imgSrc = 'images/genshin-zodiac/character-posters/fischl.jpg';
-            characterDescription = "Geminis are gentle, curious, and adaptable. These are the traits that greatly represent Fischl. Fischl is a mysterious girl who travels with a night raven named Oz. She serves as an investigator in the Adventurers' Guild. Through her unique abilities, eccentric character, and hard work, Fischl has become a rising star among the Adventurers' Guild's investigators, earning the recognition of all."
+            characterDescription = "Geminis are gentle, curious, and adaptable. These are the traits that greatly represent Fischl. Fischl is a mysterious girl who travels with a night raven named Oz. She serves as an investigator in the Adventurers' Guild. Through her unique abilities, eccentric character, and hard work, Fischl has become a rising star among the Adventurers' Guild's investigators, earning the recognition of all.";
+            audioSrc = 'audio/fischl.mp3';
                 
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
             
         case 'cancer':
@@ -166,9 +172,10 @@ function whichCharacter(sign){
             characterName = 'Tartaglia';
             dateRange = 'June 22th - July 22th';
             imgSrc = 'images/genshin-zodiac/character-posters/tartaglia.jpg';
-            characterDescription = 'Cancers are caring and protective, which all fit Tartaglia too well. He is self-confident, solipsistic, and thriving on the sensation of being alive. Tartaglia is extremely reliable at accomplishing the tasks given to him, no matter how difficult they may be. Towards those he cares about, he dedicates himself to them wholeheartedly. He cares deeply for his family and is completely loyal to the Tsaritsa.'
+            characterDescription = 'Cancers are caring and protective, which all fit Tartaglia too well. He is self-confident, solipsistic, and thriving on the sensation of being alive. Tartaglia is extremely reliable at accomplishing the tasks given to him, no matter how difficult they may be. Towards those he cares about, he dedicates himself to them wholeheartedly. He cares deeply for his family and is completely loyal to the Tsaritsa.';
+            audioSrc = 'audio/tartaglia.mp3';
                     
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
         
         case 'leo':
@@ -177,9 +184,10 @@ function whichCharacter(sign){
             characterName = 'Amber';
             dateRange = 'July 23th - August 22th';
             imgSrc = 'images/genshin-zodiac/character-posters/amber.jpg';
-            characterDescription = "Leos are cheerful, passionate, and outgoing, just like Amber. A righteous and accomplished knight, she fulfills her duties and does things by the Knights of Favonius handbook. She is charismatic and friendly, and she has no problem talking to strangers as if she's already acquainted with them. She is passionate in all things she does, be it when it comes to helping others or taking out hilichurl camps."
+            characterDescription = "Leos are cheerful, passionate, and outgoing, just like Amber. A righteous and accomplished knight, she fulfills her duties and does things by the Knights of Favonius handbook. She is charismatic and friendly, and she has no problem talking to strangers as if she's already acquainted with them. She is passionate in all things she does, be it when it comes to helping others or taking out hilichurl camps.";
+            audioSrc = 'audio/amber.mp3';
                         
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
         
         case 'virgo':
@@ -188,9 +196,10 @@ function whichCharacter(sign){
             characterName = 'Ningguang';
             dateRange = 'August 23th - September 22th';
             imgSrc = 'images/genshin-zodiac/character-posters/ningguang.jpg';
-            characterDescription = "Virgos are analytic, hard-working, and practical, and Ningguang is a perfect example of a typical Virgo. Ningguang is an entrepreneur with a great head on her shoulders. She started from the bottom and worked her way up to being one of the most powerful women in Liyue. She has bold ambitions, but she does not let them get in the way when the safety of Liyue is challenged."
+            characterDescription = "Virgos are analytic, hard-working, and practical, and Ningguang is a perfect example of a typical Virgo. Ningguang is an entrepreneur with a great head on her shoulders. She started from the bottom and worked her way up to being one of the most powerful women in Liyue. She has bold ambitions, but she does not let them get in the way when the safety of Liyue is challenged.";
+            audioSrc = 'audio/ningguang.mp3';
                             
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
 
         case 'libra':
@@ -199,9 +208,10 @@ function whichCharacter(sign){
             characterName = 'Xingqiu';
             dateRange = 'September 23th - October 23th';
             imgSrc = 'images/genshin-zodiac/character-posters/xingqiu.jpg';
-            characterDescription = 'Libras are diplomatic, gracious, social, and fair-minded, which are all the traits that Xingqiu possesses. Xingqiu is one of the most studious characters in the game. When he is first encountered, he is busy trying to find a book. While his main focus does seem to be on reading, he also is able to manage large business transactions with ease due to his calm demeanor and excellent bargaining skills.'
+            characterDescription = 'Libras are diplomatic, gracious, social, and fair-minded, which are all the traits that Xingqiu possesses. Xingqiu is one of the most studious characters in the game. When he is first encountered, he is busy trying to find a book. While his main focus does seem to be on reading, he also is able to manage large business transactions with ease due to his calm demeanor and excellent bargaining skills.';
+            audioSrc = 'audio/xingqiu.mp3';
                             
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
 
         case 'scorpio':
@@ -210,9 +220,10 @@ function whichCharacter(sign){
             characterName = 'Keqing';
             dateRange = 'October 24th - November 21th';
             imgSrc = 'images/genshin-zodiac/character-posters/keqing.jpg';
-            characterDescription = 'Scorpios are passionate, brave, determined, and ambitious, which are all Keqing’s notable traits. Keqing is a workaholic, demanding herself to work "ten times harder than the average human." She also has a strong sense of responsibility and will not stop until a task has been completed perfectly - and by her standards, that means everything related to that task is also resolved.'
+            characterDescription = 'Scorpios are passionate, brave, determined, and ambitious, which are all Keqing’s notable traits. Keqing is a workaholic, demanding herself to work "ten times harder than the average human." She also has a strong sense of responsibility and will not stop until a task has been completed perfectly - and by her standards, that means everything related to that task is also resolved.';
+            audioSrc = 'audio/keqing.mp3';
                             
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
 
         case 'sagittarius':
@@ -221,9 +232,10 @@ function whichCharacter(sign){
             characterName = 'Kaeya';
             dateRange = 'November 22th - December 21th';
             imgSrc = 'images/genshin-zodiac/character-posters/kaeya.jpg';
-            characterDescription = 'Sagittarius are idealistic, unstoppable, generous, and open-minded, much like Kaeya. Kaeya is a confident and charming individual with a flair for the dramatic. He enjoys putting his enemies and allies into high-stress situations and challenging their values. He also seems to get a kick out of telling bald-faced lies, but this tendency becomes a talent when it comes to his role as the brains of the Knights of Favonius.'
+            characterDescription = 'Sagittarius are idealistic, unstoppable, generous, and open-minded, much like Kaeya. Kaeya is a confident and charming individual with a flair for the dramatic. He enjoys putting his enemies and allies into high-stress situations and challenging their values. He also seems to get a kick out of telling bald-faced lies, but this tendency becomes a talent when it comes to his role as the brains of the Knights of Favonius.';
+            audioSrc = 'audio/kaeya.mp3';
                             
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
 
         case 'capricorn':
@@ -232,9 +244,10 @@ function whichCharacter(sign){
             characterName = 'Zhongli';
             dateRange = 'December 22th - January 19th';
             imgSrc = 'images/genshin-zodiac/character-posters/zhongli.jpg';
-            characterDescription = "Capricorns are responsible, discipline, and good-mannered. None other in Genshin Impact fits this description better than Zhongli. Zhongli is a character who is well versed in Liyue’s history and culture. He holds very philosophical ideas towards money and has great respect for Liyue's traditions. Despite being the Geo archon, Zhongli is extremely humble and deeply cares for his country."
+            characterDescription = "Capricorns are responsible, discipline, and good-mannered. None other in Genshin Impact fits this description better than Zhongli. Zhongli is a character who is well versed in Liyue’s history and culture. He holds very philosophical ideas towards money and has great respect for Liyue's traditions. Despite being the Geo archon, Zhongli is extremely humble and deeply cares for his country.";
+            audioSrc = 'audio/zhongli.mp3';
                             
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
 
         case 'aquarius':
@@ -243,9 +256,10 @@ function whichCharacter(sign){
             characterName = 'Beidou';
             dateRange = 'January 20th - February 18th';
             imgSrc = 'images/genshin-zodiac/character-posters/beidou.jpg';
-            characterDescription = 'Aquarius are independent, progressive, original, and rebellious, which are the exact traits of Beidou. Beidou is considered to be one of the strongest women in Liyue as she is the captain of the Crux Fleet. Children look up to Beidou for her strengths, and criminals fear her wrath. She is incredibly well-versed in survival but is also more than happy to sit down and have a drink with friends.'
+            characterDescription = 'Aquarius are independent, progressive, original, and rebellious, which are the exact traits of Beidou. Beidou is considered to be one of the strongest women in Liyue as she is the captain of the Crux Fleet. Children look up to Beidou for her strengths, and criminals fear her wrath. She is incredibly well-versed in survival but is also more than happy to sit down and have a drink with friends.';
+            audioSrc = 'audio/beidou.mp3';
                             
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
 
         case 'pisces':
@@ -254,9 +268,10 @@ function whichCharacter(sign){
             characterName = 'Qiqi';
             dateRange = 'February 19th - March 20th';
             imgSrc = 'images/genshin-zodiac/character-posters/qiqi.jpg';
-            characterDescription = 'Pisces are intuitive, gentle, compassionate, and sensitive. These pretty much describe Qiqi. Qiqi is extremely hard working, despite the fact that she is a zombie. She is great with herbs and is incredibly diligent when trying to find plants and has a notebook to keep up with her memories. Qiqi is innocent and is able to heal those around her even in the middle of a tough battle.'
+            characterDescription = 'Pisces are intuitive, gentle, compassionate, and sensitive. These pretty much describe Qiqi. Qiqi is extremely hard working, despite the fact that she is a zombie. She is great with herbs and is incredibly diligent when trying to find plants and has a notebook to keep up with her memories. Qiqi is innocent and is able to heal those around her even in the middle of a tough battle.';
+            audioSrc = 'audio/qiqi.mp3';
                             
-            addCharacterContent(imgSrc, dateRange, characterName, characterDescription);
+            addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc);
             break;
 
         default:
@@ -264,7 +279,10 @@ function whichCharacter(sign){
     }
 }
 
-function addCharacterContent(imgSrc, dateRange, characterName, characterDescription){
+function addCharacterContent(imgSrc, dateRange, characterName, characterDescription, audioSrc){
+    audio.src = audioSrc;
+    audio.play();
+
     const innerDiv = document.createElement('div');
     innerDiv.classList.add('inner-div')
 
@@ -288,6 +306,20 @@ function addCharacterContent(imgSrc, dateRange, characterName, characterDescript
     const innerControlButtons = document.createElement('div');
     innerControlButtons.classList.add('control-buttons-list');
 
+    const soundButton = document.createElement('button');
+    soundButton.classList.add('sound-button');
+    soundButton.classList.add('buttons');
+    soundButton.classList.add('control-buttons');
+    soundButton.classList.add('button-with-gap');
+    soundButton.addEventListener('click', () => {
+        if(audio.paused){
+            audio.play();
+        }
+        else{
+            audio.pause();
+        }
+    })
+
     const exitButton = document.createElement('button');
     exitButton.addEventListener('click', function(){
         backToMain();
@@ -295,11 +327,6 @@ function addCharacterContent(imgSrc, dateRange, characterName, characterDescript
     exitButton.classList.add('exit-button');
     exitButton.classList.add('buttons');
     exitButton.classList.add('control-buttons');
-
-    const soundButton = document.createElement('button');
-    soundButton.classList.add('sound-button');
-    soundButton.classList.add('buttons');
-    soundButton.classList.add('control-buttons');
 
     changeableContentDiv.appendChild(innerDiv);
     innerDiv.appendChild(img);
@@ -343,17 +370,11 @@ function renderHelp(){
     exitButton.classList.add('buttons');
     exitButton.classList.add('control-buttons');
 
-    const soundButton = document.createElement('button');
-    soundButton.classList.add('sound-button');
-    soundButton.classList.add('buttons');
-    soundButton.classList.add('control-buttons');
-
     changeableContentDiv.appendChild(innerDiv);
     innerDiv.appendChild(img);
     innerDiv.appendChild(contentDiv);
     contentDiv.appendChild(innerControlButtons);
     innerControlButtons.appendChild(exitButton);
-    innerControlButtons.appendChild(soundButton);
     contentDiv.appendChild(h1);
     contentDiv.appendChild(description);
 }
@@ -361,6 +382,7 @@ function renderHelp(){
 function backToMain() {
     emptyDiv();
     removeActiveClass();
+    audio.pause();
 
     const h1 = document.createElement('h1');
     h1.innerHTML = 'GENSHIN ZODIAC';
